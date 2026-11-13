@@ -4,36 +4,64 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #f6f1e7;
-    font-family:;
-    color: #542027;
-    margin-inline:8px;
+    font-family:"Noto" Georgian, sans-serif,;
+    background-color: #fdfaf2;
+    color: #2e2a26;
+    font-size: 1.0625rem;
+    flex-wrap: wrap;
 }
 /* header */
 header {
-    height: 70px;
-    padding: 0.8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    height: 80px;
     background-color: #fdfaf2;
-    border-bottom: 1px solid  #c3b59c;
+    border-bottom: 1px solid  #ddd2bf;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+    flex:1 1 300px;
+
 }
 .step {
-    color:#a98545;
+    color:#a98545;;
+    max-width: 100%;
+    margin: 0 auto;
+    flex:1 1 300px;
 }
 nav {
     display: flex;
+    flex-direction: row;
+    max-width: 100%;
     align-items: center;
+    flex:1 1 300px;
+    
+
 }
 nav a {
-     margin-right: 20px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-left: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
     text-decoration: none;
     color: #542027;
-    font-size: 17px;
+    font-size: 1.0625rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+   
 }
 nav a:hover {
     color: #a98545;
@@ -45,25 +73,33 @@ nav a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    flex: 1 1 200px;
+    flex-wrap: wrap;
 }
 .booking6 {
-    padding: 13px 22px;
     background: #fffdf5;
     color: #542027;
     border: 1px solid #5c1a23;
     cursor: pointer;
     border-radius: 5px;
+    padding: 10px 20px;
+    flex: 1 1 200px;
 }
 .LeBistro {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #5c1a23;
+    flex: 1 1 200px;
 }
+/* hero section */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 65px 8%;
-    gap: 50px;
+    padding: 80px 8%;
+
+    flex-wrap: wrap;
+    gap: 64px;
+    
 }
 .hero-text {
     max-width: 480px;
@@ -71,12 +107,14 @@ nav a:hover {
 }
 .hero-text h1 {
     color:#5c1a23;
-    font-size: 36px;
+    font-size: 2.5rem;
     margin-bottom: 20px;
+    flex:1 1 320px;
 }
 .p5 {
     color:#a98545;
-    font-size: 17px;
+    font-size: 1.0625rem;
+    flex:320px;
 }
 .hero img {
     width: 50%;
@@ -92,6 +130,7 @@ nav a:hover {
     padding: 12px 22px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.0625rem;
     margin-top: 10px;
 }
 .booking {
@@ -102,6 +141,7 @@ nav a:hover {
     padding: 12px 22px;
     cursor: pointer;
     margin-top: 10px;
+    flex-wrap: wrap;
 }
 /* უპირატესობები */
 .features {
@@ -110,9 +150,11 @@ nav a:hover {
     text-align: center;
     padding: 45px 8%;
     background-color:#ece4d3;
+    flex-wrap: wrap;
 }
 .feature {
     max-width: 250px;
+    flex: 1 1 220px;
 }
 .feature-icon {
     color: white;
@@ -122,8 +164,9 @@ nav a:hover {
     border-radius: 50%;
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 0 auto 15px;
-    font-size: 22px;
+    font-size: 1.375rem;
 }
 .feature-icon img {
     width: 30px;
@@ -132,7 +175,7 @@ nav a:hover {
     display: block;
 }
 .feature p {
-    font-size: 13px;
+    font-size: 0.9375rem;
     color:#6e645a;
     line-height: 1.6;
 }
@@ -145,70 +188,105 @@ nav a:hover {
     border-radius: 8px;
     padding: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex:1 1 260px;
+}
+.dots {
+    flex: 1;
+    border-bottom: 1px dotted #c3b59c;
+}
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color:#a98545;
+    color: #fdfaf2;
+    font-size: 0.8125rem;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 5px;
 }
 .menu {
     padding: 70px 8%;
     text-align: center;
 }
 .menu h2 {
-    font-size: 32px;
+    font-family: "Noto" Georgian, sans-serif;
+    font-size: 1.75rem;
     margin-bottom: 12px;
 }
+.menu h3 {
+    font-family: "Noto" Georgian, sans-serif;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
 .menu p {
-    font-size: 15px;
+    font-size: 1.0625rem;
     color:#6e645a;
     margin-bottom: 40px;
 }
+
 .menu-cards {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-}
-.menu-card {
     background: #fdfaf2;
     border: 1px solid #c3b59c;
     border-radius: 4px;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
 }
-.menu-card img {
+.card img {
     width: 100%;
-    height: 230px;
-    object-fit: cover;
+    display: block;
+    border-radius: 6px 6px 0 0;
 }
 .card-content {
     padding: 20px;
+    display:flex;
+    align-items: baseline;
+    gap: 8px;
 }
-
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding:16px;
+}
 .card-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 12px;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 .span1 {
     color:#c3b59c;
-    font-size: 15px;
+    font-size: 0.9375rem;
 }
 .price {
     color: #641e2b;
-    font-weight: bold;
+    font-weight: 700;
 }
 .card-content p {
-    font-size: 13px;
+    font-size: 0.9375rem;
     color: #82786d;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 .button1 {
-    background-color:#fdfaf2;
     color:#5c1a23;
     border: 1px solid #5c1a23;
-    padding: 10px 20px;
+    padding: 10px 14px;
     border-radius: 5px;
-    cursor: pointer;
+    margin-top: 10px;
     box-shadow: 5px 8px 10px #0002;
+    align-self: flex-end;
+    cursor: pointer;
+    background-color: transparent;
 }
 /* ჯავშანი */
 .booking7 {
@@ -234,7 +312,7 @@ nav a:hover {
 footer {
     background: #40151c;
     color: #eee5d7;
-    padding: 50px 8% 25px;
+    padding: 20px 5% 15px;
 }
 .footer1 {
     display: flex;
@@ -245,10 +323,11 @@ footer {
 .social-icons {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 .social-icons a {
     color: #eee5d7;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-decoration: none;
     border: 1px solid #eee5d7;
     border-radius: 20px;
@@ -261,4 +340,22 @@ footer {
     gap: 10px;
     padding: 60px;
     margin-bottom: 50px;
+}
+/* Scroll to top button */
+.to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5c1a23;
+    color: #fdfaf2;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.0625rem;
+    margin:24px;
+}
+h1 {
+    font-size: clamp(2rem, 3.25rem, 4rem);
 }
